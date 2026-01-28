@@ -22,8 +22,22 @@ include "resources/header.php";
             <button>I LOVE YOU</button>
         </form>
     </div>
-
-
+    <div class="products">
+    <h1>products</h1>
+    <form action="functions/createproducts.php" method="POST">
+        <label for=""> prod_name</label>
+        <input type="text" name="prod_name">
+        <label for="">prod quantity</label>
+        <input type="number" name="prod_quantity">
+        <label for="">prod type</label>
+        <input type="text" name="prod_type">
+        <label for="">prod price</label>
+        <input type="number" name="prod_price">
+         <label for="">prod date added</label>
+         <input type="date" name="prod_date_added">
+        <button>I LOVE YOU</button>
+    </form>
+</div>
 </body>
 
 </html>
