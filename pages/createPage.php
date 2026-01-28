@@ -22,10 +22,10 @@ include "resources/header.php";
             <button>I LOVE YOU</button>
         </form>
     </div>
-    <div class="products">
+    <div class="products ">
     <h1>products</h1>
     <form action="functions/createproducts.php" method="POST">
-        <label for=""> prod_name</label>
+        <label for=""> prod name</label>
         <input type="text" name="prod_name">
         <label for="">prod quantity</label>
         <input type="number" name="prod_quantity">
