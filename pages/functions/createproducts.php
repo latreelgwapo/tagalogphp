@@ -8,7 +8,13 @@ if (isset($_POST['prod_name']) && isset($_POST['prod_quantity']) && isset($_POST
     $prod_price = $_POST['prod_price'];
     $prod_date_added = $_POST['prod_date_added'];
 
-    $sql = "INSERT INTO products(prod_name, prod_quantity, prod_type, prod_price, prod_date_added) VALUES (:prod_name, :prod_quantity, :prod_type, :prod_price, prod_date_added)";
+    $sql = "INSERT INTO products(prod_name, prod_quantity, prod_type, prod_price, prod_date_added) 
+    VALUES (
+    :prod_name, 
+    :prod_quantity, 
+    :prod_type, 
+    :prod_price, 
+    :prod_date_added)";
     $stmnt = $conn->prepare($sql);
     $stmnt->execute([
         "prod_name" => $prod_name,
