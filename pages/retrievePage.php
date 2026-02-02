@@ -22,7 +22,7 @@ include "resources/header.php";
     ?>
     <!-- contents -->
     <h1>this a retrieve oy</h1>
-   
+
 
     <table>
 
@@ -43,7 +43,7 @@ include "resources/header.php";
                 <td><?= $item["age"] ?></td>
                 <td><?= $item["address"] ?></td>
                 <td><?= $item["username"] ?></td>
-                <td><button>view</td>
+                <td><a href="viewPage.php?user_id=<?= $item['user_id'] ?>">view</a></td>
             </tr>
         <?php
         }
