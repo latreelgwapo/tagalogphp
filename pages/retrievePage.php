@@ -45,6 +45,17 @@ include "resources/header.php";
                 <td><?= $item["username"] ?></td>
                 <td><a href="viewPage.php?user_id=<?= $item['user_id'] ?>">view</a></td>
             </tr>
+            <tr>
+                <td><?= $item['prod_name'] ?></td>
+                <td><?= $item['prod_quantity'] ?></td>
+                <td><?= $item['prod_type'] ?></td>
+                <td><?= $item['prod_price'] ?></td>
+                <td><?= $item['prod_date_added'] ?></td>
+                <td><a href="viewPageProd.php?prod_id=<?= $item['prod_id'] ?>">view</a></td>
+
+
+
+            </tr>
         <?php
         }
         ?>
