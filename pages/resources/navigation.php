@@ -13,4 +13,4 @@
             <span><a href="updatePage.php">update</a></span>
             <span><a href="deletePage.php">delete</a></span>
         </div>
-    </header>
+    </header>0
