@@ -14,17 +14,21 @@ if (isset($_GET['user_id'])) {
 <!DOCTYPE html>
 <html lang="en">
 
-<?php
+<?php 
 include "resources/header.php";
 ?>
 
 <body>
-    <?php
-    include "resources/navigation.php";
-    ?>
-    <h1>name: <?= $getUser[0]["names"] ?></h1>
-    <h1>age: <?= $getUser[0]["age"] ?></h1>
-    <h1>address: <?= $getUser[0]["address"] ?></h1>
-    <h1>Username: <?= $getUser[0]["username"] ?></h1>
-   <a href="">EDIT</a>
-   </body>
+    <h1>View and Update Page</h1>
+    <label for="user_name">Name</label> <br>
+    <input name="user_name" type="text" value="<?= $getUser[0]['name'] ?>"> <br>
+    <label for="user_name">Age</label> <br>
+    <input name="user_name" type="number" value="<?= $getUser[0]['age'] ?>"><br>
+    <label for="user_name">Address</label> <br>
+    <input name="user_name" type="number" value="<?= $getUser[0]['address'] ?>"> <br>
+    <label for="user_name">Username</label> <br>
+    <input name="user_name" type="number" value="<?= $getUser[0]['username'] ?>"><br>
+    <label for="user_name">Password</label> <br>
+    <input name="user_name" type="number" value="<?= $getUser[0]['password'] ?>"><br>
+
+</body>
