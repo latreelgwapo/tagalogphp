@@ -14,21 +14,24 @@ if (isset($_GET['user_id'])) {
 <!DOCTYPE html>
 <html lang="en">
 
-<?php 
+<?php
 include "resources/header.php";
 ?>
 
 <body>
+    <form action=""></form>
     <h1>View and Update Page</h1>
-    <label for="user_name">Name</label> <br>
-    <input name="user_name" type="text" value="<?= $getUser[0]['name'] ?>"> <br>
-    <label for="user_name">Age</label> <br>
-    <input name="user_name" type="number" value="<?= $getUser[0]['age'] ?>"><br>
-    <label for="user_name">Address</label> <br>
-    <input name="user_name" type="number" value="<?= $getUser[0]['address'] ?>"> <br>
-    <label for="user_name">Username</label> <br>
-    <input name="user_name" type="number" value="<?= $getUser[0]['username'] ?>"><br>
-    <label for="user_name">Password</label> <br>
-    <input name="user_name" type="number" value="<?= $getUser[0]['password'] ?>"><br>
+    <label for="names">Name</label> 
+    <input name="names" type="text" value="<?= $getUser[0]['names'] ?>"> 
+    <label for="age">Age</label> 
+    <input name="age" type="text" value="<?= $getUser[0]['age'] ?>">
+    <label for="address">Address</label> 
+    <input name="address" type="text" value="<?= $getUser[0]['address'] ?>"> 
+    <label for="username">Username</label> 
+    <input name="username" type="text" value="<?= $getUser[0]['username'] ?>">
+    <label for="password">Password</label> 
+    <input name="password" type="text" value="<?= $getUser[0]['password'] ?>">
 
+
+<button>edit</button>
 </body>
