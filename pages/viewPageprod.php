@@ -3,7 +3,7 @@ include "../config/includes.php";
 
 if (isset($_GET['prod_id'])) {
     $prod_id = $_GET['prod_id'];
-    $getprod = getproducts($prod_id);
+    $updateprod = updateproducts($prod_id);
 } else {
     echo "<script> window.location.href='retrivePage.php'</script>";
 }
@@ -22,10 +22,22 @@ include "resources/header.php";
     <?php
     include "resources/navigation.php";
     ?>
-    <h1>prod_name: <?= $getprod[0]["prod_name"] ?></h1>
-    <h1>prod_quantity: <?= $getprod[0]["prod_quantity"] ?></h1>
-    <h1>prod_type: <?= $getprod[0]["prod_type"] ?></h1>
-    <h1>prod_price: <?= $getprod[0]["prod_price"] ?></h1>
-    <h1>prod_date_added: <?= $getprod[0]["prod_date_added"] ?></h1>
+    <form action="functions/updateuser.php"></form>
+    <label for="prod_name">prod_name</label>
+    <input name="prod_name" type="text" value="<?= $getprod[0]['prod_name'] ?>">
+
+    <label for="prod_quantity">prod_quantity</label>
+    <input name="prod_quantity" type="text" value="<?= $getprod[0]['prod_quantity'] ?>">
+
+    <label for="prod_type">prod_type</label>
+    <input name="prod_type" type="text" value="<?= $getprod[0]['prod_type'] ?>">
+
+    <label for="prod_price">prod_price</label>
+    <input name="prod_price" type="text" value="<?= $getprod[0]['prod_price'] ?>">
+
+    <label for="prod_date_added">prod_date_added</label>
+    <input name="prod_date_added" type="text" value="<?= $getprod[0]['prod_date_added'] ?>">
+
     <a href="">EDIT</a>
+    </form>
 </body>

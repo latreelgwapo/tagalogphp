@@ -1,25 +1,25 @@
 <?php
 include "../../config/includes.php";
 
-if (isset($_POST['user_id'])) {
+if (isset($_POST['prod_id'])) {
 
-    $name = $_POST['namez'];
-     $age = $_POST['age'];
-    $address = $_POST['address'];
-    $username = $_POST['user_name'];
-    $password = $_POST['password'];
-    $user_id = $_POST['user_id'];
+    $names = $_POST['prod_name'];
+    $age = $_POST['prod_quantity'];
+    $address = $_POST['prod_type'];
+    $username = $_POST['prod_price'];
+    $password = $_POST['prod_date_added'];
+    $user_id = $_POST['prod_id'];
 
 
-    $result = updateUSer($userid, $namez, $age, $address, $username, $password);
+    $result = updateUSer($prod_id, $prod_name, $prod_quantity, $prod_type, $prod_price, $prod_date_added);
 
     if($result){
-        echo "<script> window.location.href='retrievePage.php' </script";
+        echo "<script> window.location.href='../retrievePage.php' </script>";
     }else{
-        echo "<script> window.location.href='../viewPage.php?user_id'".$userid." ' </script";
+        echo "<script> window.location.href='../viewPage.php?user_id'".$prod_id." ' </script>";
     }
 }else{
-    echo "<script> window.location.href='retrievePage.php' </script";
+    echo "<script> window.location.href='../retrievePage.php' </script>";
 
 }
 ?>

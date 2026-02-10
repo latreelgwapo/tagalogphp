@@ -51,24 +51,57 @@ function getProducts()
     $sql = "SELECT * FROM  products";
     $stmnt = $conn->prepare($sql);
     $stmnt->execute();
-        
+
     return $stmnt->fetchAll(PDO::FETCH_ASSOC);
 }
 // this is for updating user
-function updateUser($user_id, $names, $age, $address, $username, $password)
+function updateUser($user_id, $names, $age, $address, $usernames, $passwords)
 {
     include "connection.php";
 
-    $sql = "UPDATE user SET names= :names, age= :age, address= :address, password= :password WHERE user_id =:user_id";
+    $sql = "UPDATE user SET 
+        username = :username,
+        names= :names,
+        age= :age, 
+        address= :address,
+        password= :password 
+        WHERE 
+        user_id =:user_id";
     $stmnt = $conn->prepare($sql);
     $stmnt->execute([
-       "names" => $names,
-    "age" => $age,
-    "address" => $address,
-    "username" => $username,
-    "password" => $password,
-    "user_id" => $userid
+        "names" => $names,
+        "age" => $age,
+        "address" => $address,
+        "username" => $usernames,
+        "password" => $passwords,
+        "user_id" => $user_id   
     ]);
 
-    return $stmnt->fetchAll(PDO::FETCH_ASSOC);
+    return $stmnt;
+}
+
+// THIS is for updateprod
+function updateproducts($prod_name, $prod_quantity, $prod_type, $prod_price, $prod_date_added,)
+{
+    include "connection.php";
+
+    $sql = "UPDATE products SET 
+        prod_name = :prod_name,
+        prod_quantity= :prod_quantity,
+        prod_type= :prod_type, 
+        prod_price= :prod_price,
+        prod_date_added= :prod_date_added 
+        WHERE 
+        prod_id =:prod_id";
+    $stmnt = $conn->prepare($sql);
+    $stmnt->execute([
+        "prod_name" => $prod_name,
+        "prod_quantity" => $prod_quantity,
+        "prod_type" => $prod_type,
+        "prod_price" => $prod_price,
+        "prod_date_added" => $prod_date_added,
+        "prod_id" => $prod_id   
+    ]);
+
+    return $stmnt;
 }

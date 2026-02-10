@@ -1,11 +1,10 @@
 <?php
 include "../config/includes.php";
 
-if (isset($_GET['user_id'])) {
-    $user_id = $_GET['user_id'];
-    $getUser = getUser($user_id);
+if (isset($_GET['prod_id'])) {
+   $prod_id = $_GET['prod_id'];
 } else {
-    echo "<script> window.location.href='retrivePage.php'</script>";
+    echo "<script> window.location.href='../retrivePage.php'</script>";
 }
 
 ?>
@@ -19,7 +18,7 @@ include "resources/header.php";
 ?>
 
 <body>
-    <form action=""></form>
+    <form action="functions/updateuser.php" method="POST">
     <h1>View and Update Page</h1>
     <label for="names">Name</label> 
     <input name="names" type="text" value="<?= $getUser[0]['names'] ?>"> 
@@ -32,6 +31,9 @@ include "resources/header.php";
     <label for="password">Password</label> 
     <input name="password" type="text" value="<?= $getUser[0]['password'] ?>">
 
+    <input name="user_id" type="text" value="<?= $getUser[0]['user_id'] ?>" hidden>
 
-<button>edit</button>
+    <button>edit</button>
+</form>
+
 </body>
