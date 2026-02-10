@@ -3,7 +3,7 @@ include "../config/includes.php";
 
 if (isset($_GET['prod_id'])) {
     $prod_id = $_GET['prod_id'];
-    $updateprod = updateproducts($prod_id);
+  
 } else {
     echo "<script> window.location.href='retrivePage.php'</script>";
 }
